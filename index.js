@@ -1,8 +1,10 @@
 var buttonAsk = document.querySelector('#button-1');
 var buttonClear = document.querySelector('#button-2');
+var buttonFavorite = document.querySelector('#button-3');
 var input = document.querySelector('input');
 var imgEightBall = document.querySelector('#eight-ball-pic');
 var output = document.querySelector('#output');
+var sectionFav = document.querySelector('#fav-grid')
 
 var responses = [
   'It is certain.',
@@ -30,12 +32,14 @@ window.onload = clearForm;
 input.addEventListener('keyup', setButtonStatus);
 buttonAsk.addEventListener('click', askQuestion);
 buttonClear.addEventListener('click', clearForm);
+buttonFavorite.addEventListener('click',favorIt);
 
 ;function askQuestion(){
   imgEightBall.classList.add('hidden');
   output.classList.remove('hidden');
-  buttonClear.disabled = false;
   buttonAsk.disabled = true;
+  buttonClear.disabled = false;
+  buttonFavorite.disabled = false;
   output.childNodes[1].innerText = input.value;
   output.childNodes[3].innerText = getRandomOutput();
   input.value = '';
@@ -47,6 +51,21 @@ buttonClear.addEventListener('click', clearForm);
   output.classList.add('hidden');
   buttonAsk.disabled = true;
   buttonClear.disabled = true;
+  buttonFavorite.disabled = true;
+};
+
+;function favorIt(){
+  document.querySelector('#fav-title')
+          .classList
+          .remove('hidden');
+
+  sectionFav.classList.remove('hidden');
+  buttonFavorite.disabled = true;
+  var currentQuestion = output.childNodes[1].innerText;
+  var currentResponse = output.childNodes[3].innerText;
+  sectionFav.innerHTML += `
+    <h3><span class="italic-text">${currentQuestion}</span>    ${currentResponse}</h3>
+  `
 };
 
 ;function setButtonStatus(){
