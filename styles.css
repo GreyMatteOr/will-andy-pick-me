@@ -40,7 +40,7 @@ section>input{
   box-shadow: none;
 }
 
-section>button{
+#button-1{
   grid-row: 2;
   color: white;
   background-color: #2B4E80;
@@ -48,19 +48,23 @@ section>button{
   box-shadow: none;
 }
 
+#button-1:hover{
+  background-color: #1C3455;
+}
+
+#button-1:disabled{
+  background-color: #607AA0;
+}
+
 #eight-ball-pic{
   grid-row: 3;
   height: 6.25em;
   width: auto;
-  /* padding: 2.5625em; */
   margin:auto;
 }
 
 #output{
   grid-row: 3;
-  height: 6.25em;
-  width: auto;
-  /* padding: 2.5625em; */
   margin:auto;
   text-align: center;
 }
@@ -71,20 +75,16 @@ section>button{
   grid-template-columns: 1fr 3.4375em;
 }
 
-#clear-button-grid>button{
+#button-2{
   grid-column: 2;
   color: white;
   background-color: #DE4841;
-  border-color: #D0CDCD;
   border: 0;
   box-shadow: none;
 }
 
-section>div>button:disabled{
-  grid-column: 2;
-  color: white;
+#button-2:disabled{
   background-color: #D0CDCD;
-  border-color: #D0CDCD;
 }
 
 main>img{

@@ -26,14 +26,31 @@ var responses = [
   'Outlook not so good.',
   'Very doubtful.'];
 
+window.onload = clearForm;
+input.addEventListener('keyup', setButtonStatus);
 buttonAsk.addEventListener('click', askQuestion);
+buttonClear.addEventListener('click', clearForm);
 
 ;function askQuestion(){
   imgEightBall.classList.add('hidden');
   output.classList.remove('hidden');
+  buttonClear.disabled = false;
+  buttonAsk.disabled = true;
   output.childNodes[1].innerText = input.value;
   output.childNodes[3].innerText = getRandomOutput();
   input.value = '';
+};
+
+;function clearForm(){
+  input.value = '';
+  imgEightBall.classList.remove('hidden');
+  output.classList.add('hidden');
+  buttonAsk.disabled = true;
+  buttonClear.disabled = true;
+};
+
+;function setButtonStatus(){
+  buttonAsk.disabled = (input.value === '');
 };
 
 ;function getRandomOutput(){
