@@ -7,6 +7,29 @@
     <title>Will Andy Pick Me?</title>
   </head>
   <body>
-
+    <header>
+      <h1 class='blue-text'>Will Andy pick me?</h1>
+    </header>
+    <main>
+      <section>
+        <input class='medium-text grey-text' placeholder="Ask your question here!">
+        <button class='medium-text grey-text' id='button-1'>Get your answer</button>
+        <img id='eight-ball-pic' src="./assets/eight-ball.png" alt="a magic eight-ball">
+        <div  class="hidden" id='output'>
+          <h3 class="italic-text"></h3>
+          <h2></h2>
+        </div>
+        <div id='clear-button-grid'>
+           <button class='medium-text grey-text' id='button-2'>Clear</button>
+           <button class='medium-text grey-test' id='button-3'>Favorite!</button>
+        </div>
+      </section>
+      <img src="./assets/woody.png" alt="Woody from Toy Story">
+      <div class='hidden' id='fav-rows'>
+        <h1 class='blue-text hidden' id='fav-title'>Favorites!</h1>
+        <section class='hidden' id='fav-grid'></section>
+      </div>
+    </main>
   </body>
+  <script src="./index.js"></script>
 </html>

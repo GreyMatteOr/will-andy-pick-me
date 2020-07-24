@@ -1,6 +1,141 @@
 /* font-family: 'Open Sans', sans-serif; */
 /* font-family: 'Life Savers', serif; */
+body{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 7.5em 20.4375em 1fr;
+  justify-content:center;
+}
 
+header{
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  font-size: 1.5em;
+  font-family: 'Life Savers', serif;
+}
+
+main{
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+main *{
+  font-family: 'Open Sans', sans-serif;
+}
+
+section{
+  display: grid;
+  grid-template-rows: 2.25em 2.25em auto 2.25em;
+  grid-template-columns: 23.3125em;
+  grid-row-gap: .5em;
+  padding: 1em;
+  background-color: #E6ECF4;
+}
+
+section>input{
+  grid-row: 1;
+  text-align: center;
+  border: 0;
+  box-shadow: none;
+}
+
+#button-1{
+  grid-row: 2;
+  color: white;
+  background-color: #2B4E80;
+  border: 0;
+  box-shadow: none;
+}
+
+#button-1:hover{
+  background-color: #1C3455;
+}
+
+#button-1:disabled{
+  background-color: #607AA0;
+}
+
+#eight-ball-pic{
+  grid-row: 3;
+  height: 6.25em;
+  width: auto;
+  margin:auto;
+}
+
+#output{
+  grid-row: 3;
+  margin:auto;
+  text-align: center;
+}
+
+#clear-button-grid{
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: 5em 1fr 3.4375em;
+}
+
+#button-2{
+  grid-column: 3;
+  color: white;
+  background-color: #DE4841;
+  border: 0;
+  box-shadow: none;
+}
+
+#button-2:disabled{
+  background-color: #D0CDCD;
+}
+
+#button-3{
+  grid-column: 1;
+  grid-row: 1;
+  color: white;
+  background-color: #ff0000;
+  border: 0;
+  box-shadow: none;
+}
+
+#button-3:hover{
+  background-color: #990000;
+}
+
+#button-3:disabled{
+  background-color: #ffcccc;
+}
+
+main>img{
+  height: 20.4375em;
+  width: auto;
+  margin-left: 5.5em;
+}
+
+#fav-rows{
+  grid-row: 3;
+  display: grid;
+  grid-template-rows: 3em 1fr;
+  justify-content: center;
+}
+
+#fav-title{
+  grid-row: 1;
+  font-size: 1.5em;
+  font-family: 'Life Savers', serif;
+}
+
+#fav-grid{
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: .25em;
+  background-color: inherit;
+}
+
+#fav-grid h3{
+  background-color: #E6ECF4;
+  padding: .25em;
+  margin: auto;
+}
 /*
 COLORS
 H1, Get answer button, text in input field: #2B4E80;
@@ -10,3 +145,23 @@ light blue background: #E6ECF4;
 clear button: #DE4841;
 clear button disabled: #D0CDCD
 */
+
+.blue-text{
+  color: #2B4E80;
+}
+
+grey-text{
+  color:grey;
+}
+
+.medium-text{
+  font-size: 1em;
+}
+
+.italic-text{
+  font-style: italic;
+}
+
+.hidden{
+  display: none;
+}
