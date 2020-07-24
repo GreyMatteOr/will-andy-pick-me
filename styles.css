@@ -48,7 +48,7 @@ section>button{
   box-shadow: none;
 }
 
-section>img{
+#eight-ball-pic{
   grid-row: 3;
   height: 6.25em;
   width: auto;
@@ -56,13 +56,22 @@ section>img{
   margin:auto;
 }
 
-section>div{
+#output{
+  grid-row: 3;
+  height: 6.25em;
+  width: auto;
+  /* padding: 2.5625em; */
+  margin:auto;
+  text-align: center;
+}
+
+#clear-button-grid{
   grid-row: 4;
   display: grid;
   grid-template-columns: 1fr 3.4375em;
 }
 
-section>div>button{
+#clear-button-grid>button{
   grid-column: 2;
   color: white;
   background-color: #DE4841;
@@ -103,4 +112,12 @@ grey-text{
 
 .medium-text{
   font-size: 1em;
+}
+
+.italic-text{
+  font-style: italic;
+}
+
+.hidden{
+  display: none;
 }
