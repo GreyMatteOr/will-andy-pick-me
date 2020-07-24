@@ -1,6 +1,88 @@
 /* font-family: 'Open Sans', sans-serif; */
 /* font-family: 'Life Savers', serif; */
+body{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 7.5em 20.4375em;
+  justify-content:center;
+}
 
+header{
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  font-size: 1.5em;
+  font-family: 'Life Savers', serif;
+}
+
+main{
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+main *{
+  font-family: 'Open Sans', sans-serif;
+}
+
+section{
+  display: grid;
+  grid-template-rows: 2.25em 2.25em auto 2.25em;
+  grid-template-columns: 23.3125em;
+  grid-row-gap: .5em;
+  padding: 1em;
+  background-color: #E6ECF4;
+}
+
+section>input{
+  grid-row: 1;
+  text-align: center;
+  border: 0;
+  box-shadow: none;
+}
+
+section>button{
+  grid-row: 2;
+  color: white;
+  background-color: #2B4E80;
+  border: 0;
+  box-shadow: none;
+}
+
+section>img{
+  grid-row: 3;
+  height: 6.25em;
+  width: auto;
+  /* padding: 2.5625em; */
+  margin:auto;
+}
+
+section>div{
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: 1fr 3.4375em;
+}
+
+section>div>button{
+  grid-column: 2;
+  color: white;
+  background-color: #DE4841;
+  border-color: #D0CDCD;
+  border: 0;
+  box-shadow: none;
+}
+
+section>div>button:disabled{
+  grid-column: 2;
+  color: white;
+  background-color: #D0CDCD;
+  border-color: #D0CDCD;
+}
+
+main>img{
+  height: 20.4375em;
+  width: auto;
+  margin-left: 5.5em;
+}
 /*
 COLORS
 H1, Get answer button, text in input field: #2B4E80;
@@ -10,3 +92,15 @@ light blue background: #E6ECF4;
 clear button: #DE4841;
 clear button disabled: #D0CDCD
 */
+
+.blue-text{
+  color: #2B4E80;
+}
+
+grey-text{
+  color:grey;
+}
+
+.medium-text{
+  font-size: 1em;
+}
